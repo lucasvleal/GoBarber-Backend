@@ -1,4 +1,4 @@
-import User from '../models/Users';
+import User from '../modules/users/infra/typeorm/entities/User';
 
 declare namespace Express {
     export interface Request {
