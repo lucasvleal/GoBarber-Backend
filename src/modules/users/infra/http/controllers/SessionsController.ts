@@ -3,7 +3,7 @@ import { container } from 'tsyringe';
 
 import AuthenticateUserService from '@modules/users/services/AuthenticateUserService';
 
-export default class UserssController {
+export default class SessionsController {
     public async index(
         request: Request,
         response: Response,
