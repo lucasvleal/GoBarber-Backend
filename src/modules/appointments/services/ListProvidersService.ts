@@ -29,8 +29,6 @@ export default class ListProviderService {
                 exceptUserId: user_id,
             });
 
-            console.log('A query foi feita');
-
             await this.cacheProvider.save(`providers-list:${user_id}`, users);
         }
 

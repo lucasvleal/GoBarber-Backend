@@ -1,17 +1,22 @@
 import 'reflect-metadata';
 
 // import AppError from '@shared/errors/AppError';
+import FakeCacheProvider from '@shared/container/providers/CacheProvider/fakes/FakeCacheProvider';
 import ListProviderAppointmentsService from './ListProviderAppointmentsService';
 import FakeAppointmentsRepository from '../repositories/fakes/FakeAppointmentsRepository';
 
 let listProviderAppontments: ListProviderAppointmentsService;
 let fakeAppointmentsRepository: FakeAppointmentsRepository;
+let fakeCacheProvider: FakeCacheProvider;
 
 describe('ListProviderDayAvailability', () => {
     beforeEach(() => {
         fakeAppointmentsRepository = new FakeAppointmentsRepository();
+        fakeCacheProvider = new FakeCacheProvider();
+
         listProviderAppontments = new ListProviderAppointmentsService(
             fakeAppointmentsRepository,
+            fakeCacheProvider,
         );
     });
 
